@@ -29,7 +29,7 @@ const getAllClients = async (req, res) => {
 // llama a un client en especifico 
 const getClient = async (req, res) => {
     try {
-        const client = await Directory.findOne(req.params.id)
+        const client = await Directory.findById(req.params.id)
 
         if(!client) {
             res.status(404).json({messege: "No se encontro al cliente"})
