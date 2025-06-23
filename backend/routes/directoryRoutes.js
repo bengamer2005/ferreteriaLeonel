@@ -4,8 +4,8 @@ const { createClient, getAllClients, getClient, updateClient, deleteClient } = r
 
 router.post("/create", createClient)
 router.get("/getAll", getAllClients)
-router.get("/get", getClient)
-router.put("/update", updateClient)
-router.delete("/delete", deleteClient)
+router.get("/get/:id", getClient)
+router.put("/update/:id", updateClient)
+router.delete("/delete/:id", deleteClient)
 
 module.exports = router
