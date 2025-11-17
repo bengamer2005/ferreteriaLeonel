@@ -6,7 +6,7 @@ import { useQuery } from "@tanstack/react-query"
 import { useSucursalPage } from "../hooks/useSucursalHook"
 // componentes
 import Layout from "../components/layout"
-import LeonelLoader from "../components/loader"
+import { LoaderEngranaje } from "../components/loader"
 // img
 import FerreteriaImgDir from "../img/FerreteriaImgDir.png"
 
@@ -14,16 +14,17 @@ const SucursalPage = () => {
     // sacamos la info del hook
     const { ferreteriaInfo, ferreteriaTel } = useSucursalPage()
 
-    if(!ferreteriaInfo.length ) return <p>Cargando ...</p>
-    if(!ferreteriaTel.length ) return <p>Cargando ...</p>
+    if(!ferreteriaInfo.length ) return <>
+        <Layout>
+            <LoaderEngranaje/>
+        </Layout>
+    </>
 
-    // if(!ferreteriaTel.length ) {
-    //     return (
-    //         <Layout>
-    //             <LeonelLoader/>
-    //         </Layout>
-    //     )
-    // }
+    if(!ferreteriaTel.length ) return <>
+        <Layout>
+            <LoaderEngranaje/>
+        </Layout>
+    </>
 
     // coords de la ferreteria
     const coords = [ferreteriaInfo[0].lat, ferreteriaInfo[0].lon]

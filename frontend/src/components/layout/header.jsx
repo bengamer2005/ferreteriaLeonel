@@ -21,9 +21,9 @@ const Header = () => {
                 {/* links */}
                 <nav className="hidden sm:flex space-x-6 text-lg font-medium ml-auto pr-10">
                     <Link className="hover:text-slate-600 hover:underline hover:decoration-orange-500 hover:underline-offset-4" to="/">Inicio</Link>
-                    <Link className="hover:text-slate-600 hover:underline hover:decoration-orange-500 hover:underline-offset-4" to="/">Productos</Link>
+                    <Link className="hover:text-slate-600 hover:underline hover:decoration-orange-500 hover:underline-offset-4" to="/productos?type=materiales">Productos</Link>
                     <Link className="hover:text-slate-600 hover:underline hover:decoration-orange-500 hover:underline-offset-4" to="/sucursal">Sucursal</Link>
-                    <Link className="hover:text-slate-600 hover:underline hover:decoration-orange-500 hover:underline-offset-4" to="/">Contacto</Link>
+                    <Link className="hover:text-slate-600 hover:underline hover:decoration-orange-500 hover:underline-offset-4" to="/contacto">Contacto</Link>
                 </nav>
             </header>
 
@@ -31,7 +31,7 @@ const Header = () => {
             {open && (
                 <nav className="sm:hidden flex flex-col bg-gray-100 py-2 space-y-2 text-lg px-4">
                     <Link onClick={() => setOpen(false)} to="/">Inicio</Link>
-                    <Link onClick={() => setOpen(false)} to="/productos">Productos</Link>
+                    <Link onClick={() => setOpen(false)} to="/productos?type=materiales">Productos</Link>
                     <Link onClick={() => setOpen(false)} to="/sucursal">Sucursal</Link>
                     <Link onClick={() => setOpen(false)} to="/contacto">Contacto</Link>
                 </nav>

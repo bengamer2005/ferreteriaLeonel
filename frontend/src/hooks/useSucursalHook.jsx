@@ -12,6 +12,7 @@ export const useSucursalPage = () => {
         queryFn: FerreteriaInfo
     })
 
+    // le asignamos a cada estado su debido arreglo
     useEffect(() => {
         if(data) {
             setFerreteriaInfo(data.ferreteriasInfo || [])
