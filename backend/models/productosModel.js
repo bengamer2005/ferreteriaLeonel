@@ -7,6 +7,10 @@ const Productos = sequelize.define("Productos", {
         autoIncrement: true,
         primaryKey: true
     },
+    idTipoMaterial: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
     nombre: {
         type: DataTypes.STRING,
         allowNull: false

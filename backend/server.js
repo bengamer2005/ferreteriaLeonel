@@ -17,6 +17,7 @@ const PedidosDetalle = require("./models/pedidosDetalleModel")
 const Ferreterias = require("./models/ferreteriaInfoModel")
 const TelefonosFerreteria = require("./models/telefonosFerreteriaModel")
 const CatalogoTipoTelefono = require("./models/catalogoTipoTelefonoModel")
+const CatalogoTipoMaterial = require("./models/catalogoTipoMaterial")
 
 // definimos las relaciones
 Usuarios.hasMany(Pedidos, { foreignKey: "idUsuario" })
