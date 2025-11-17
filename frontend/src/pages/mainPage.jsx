@@ -8,7 +8,7 @@ const MainPage = () => {
     return (
         <>
             <Layout>
-                <div className="bg-slate-100">
+                <div className="bg-gray-200">
                     {/* presentacion principal */}
                     <div className="relative flex flex-col lg:flex-row justify-evenly items-center p-6 lg:h-[400px] gap-6">
                         <img className="w-full sm:h-72 md:h-80 lg:h-[100%] lg:w-auto object-cover rounded" src={FerreteriaImg} alt="FerreteriaMaterialesLeonel" />
@@ -24,13 +24,13 @@ const MainPage = () => {
                     {/* seccion de servicios */}
                     <section id="servicios" className="py-10 bg-white">
                         <div className="max-w-6xl mx-auto px-4">
-                        <h3 className="text-xl sm:text-2xl font-bold text-center mb-12">Nuestros Servicios</h3>
+                            <h3 className="text-xl sm:text-2xl font-bold text-center mb-12">Nuestros Servicios</h3>
                             <div className="grid md:grid-cols-2 gap-8">
-                                <Link to="/" className="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+                                <Link to="/" className="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition">
                                     <h4 className="text-lg sm:text-xl font-semibold mb-2">Ferreteria</h4>
                                     <p className="text-gray-600 text-sm sm:text-md">Catalogo de herramientas de diversas marcas.</p>
                                 </Link>
-                                <Link to="/" className="bg-gray-100 p-6 rounded-lg shadow hover:shadow-lg transition">
+                                <Link to="/" className="bg-gray-200 p-6 rounded-lg shadow hover:shadow-lg transition">
                                     <h4 className="text-lg sm:text-xl font-semibold mb-2">Materiales</h4>
                                     <p className="text-gray-600 text-sm sm:text-md">Catalogo de materiales para la construccion.</p>
                                 </Link>

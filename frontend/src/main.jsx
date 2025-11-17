@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 // estilos
 import "./style/index.css"
+import "leaflet/dist/leaflet.css"
 import App from './App.jsx'
 
 const queryClient = new QueryClient()
