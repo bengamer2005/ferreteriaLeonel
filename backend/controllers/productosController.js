@@ -29,6 +29,26 @@ const newProduct = async (req, res) => {
     }
 }
 
+// obtiene todos los productos
+const allProducts = async (req, res) => {
+    try {
+        // llama a todos los productos de materiales
+        const productosMateriales = await productos.findAll({
+            where: { idTipoMaterial: 1, activo: 1}
+        })
+
+        // llama a todos los productos de ferreteria
+        const productosFerreteria = await productos.findAll({
+            where: {idTipoMaterial: 2, activo: 1}
+        })
+
+        res.status(200).json({productosMateriales, productosFerreteria})
+    } catch (error) {
+        res.status(500).json({message: "Ocurrio un error al llamar a todos los productos, error: ", error})
+    }
+}
+
 module.exports = {
-    newProduct
+    newProduct,
+    allProducts
 } 

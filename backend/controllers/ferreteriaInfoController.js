@@ -9,7 +9,7 @@ const getAllInfoFerreteria = async (req, res) => {
     try {
         // obtenemos toda la informacion de las ferreterias activas
         const ferreteriasInfo = await Ferreterias.findAll({
-            where: activo = 1
+            where: {activo: 1}
         })
 
         // obtenemos todos los numeros de las ferreterias con su tipo y que esten activas

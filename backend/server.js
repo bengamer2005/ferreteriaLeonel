@@ -4,7 +4,7 @@ const cors = require("cors")
 app.use(express.json())
 require("dotenv").config({ path: "./.env" })
 
-// 
+// usamos cors para solo admitir peticiones del frontend
 app.use(cors({
     origin: process.env.FRONTEND
 }))
@@ -55,10 +55,12 @@ DBConnect()
 // llamamos a todas las rutas
 const userRoute = require("./routes/usuarioRoute")
 const ferreteriaRoute = require("./routes/ferreteriasRoute")
+const productosRoute = require("./routes/productosRoute")
 
 // exponemos los endpoints
 app.use("/materialesLeonel/usuario", userRoute)
 app.use("/materialesLeonel/ferreteria", ferreteriaRoute)
+app.use("/materialesLeonel/productos", productosRoute)
 
 // corremos el servidor en un puerto
 const port = process.env.PORT || 3000
